@@ -79,12 +79,12 @@ let wagesEarnedOnDate = function(date){
 
 let findEmployeeByFirstName = function(srcArray, firstName){
     return srcArray.find(function(emp){
-        emp.firstName === firstName
+        return emp.firstName === firstName
     })
 }
 
 let calculatePayroll = function(emps){
     return emps.reduce(function(all, emp){
         return all + allWagesFor.call(emp)
-    })
+    }, 0)
 }
